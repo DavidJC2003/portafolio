@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DAVID ERNESTO JAIME CARRILLO</title>
+    <meta name="description" content="Portafolio de JAIME DAVID, Garantizando páginas web." />
+    <meta name="keywords" content="DAVID ERNESTO JAIME CARRILLO, Desarrollador ciberseguridad" />
+    <meta name="author" content="DAVID ERNESTO JAIME CARRILLO" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/loaders.css/0.1.2/loaders.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+      :root {
+        --main-color: #e07a5f;
+        --snd-bf-color: #3d405b;
+        --bg-color: #f4f1de;
+      }
+
+      body {
+        font-size: 18px;
+      }
+
+      #toggle-lang {
+        margin-left: 20px;
+        padding: 6px 16px;
+        font-size: 1.4rem;
+        border: none;
+        border-radius: 10px;
+        background-color: var(--main-color);
+        color: var(--bg-color);
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+
+      #toggle-lang:hover {
+        background-color: var(--snd-bf-color);
+        color: white;
+      }
+
+      .proyecto {
+        padding: 8rem 10%;
+        background: #fff;
+        text-align: center;
+      }
+
+      .proyecto h2 {
+        font-size: 3.6rem;
+        margin-bottom: 3rem;
+        color: #3d405b;
+      }
+
+      .proyecto .subtitulo {
+        font-size: 2.4rem;
+        margin-top: 3rem;
+        color: #3d405b;
+      }
+
+      .proyecto p {
+        font-size: 1.6rem;
+        max-width: 800px;
+        margin: 0 auto 2rem;
+        line-height: 1.8;
+        color: #333;
+      }
+
+      .galeria-proyecto {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .galeria-proyecto a img {
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #ccc;
+        transition: transform 0.3s;
+      }
+
+      .galeria-proyecto a:hover img {
+        transform: scale(1.05);
+      }
+
+      .enlaces-proyecto a {
+        display: inline-block;
+        margin: 1rem;
+        font-size: 1.6rem;
+        text-decoration: none;
+        background-color: #e07a5f;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        transition: background-color 0.3s;
+      }
+
+      .enlaces-proyecto a:hover {
+        background-color: #d65a3b;
+      }
+
+      .btn-caja .btnmodal {
+        background-color: var(--main-color);
+        color: var(--bg-color);
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.6rem;
+        display: inline-block;
+        transition: background-color 0.3s;
+      }
+
+      .btn-caja .btnmodal:hover {
+        background-color: var(--snd-bf-color);
+      }
+
+      footer {
+        background-color: #3d405b;
+        color: #f4f1de;
+        padding: 2rem;
+        text-align: center;
+        font-size: 1.4rem;
+      }
+      .mostrar-btn {
+  margin-top: 2rem;
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 25px;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.mostrar-btn:hover {
+  background-color: var(--snd-bf-color);
+}
+
+.certificados {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  
+}.recomendaciones {
+  background-color: #3d405b;
+  padding: 6rem 10%;
+  width: 100%;
+  color: #fff;
+}
+
+.recomendaciones h2 {
+  font-size: 3.4rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: #f4f1de;
+}
+
+.cartas-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.carta-box {
+  background-color: var(--bg-color);
+  padding: 2rem;
+  border-radius: 16px;
+  width: 300px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.carta-box:hover {
+  transform: scale(1.05);
+}
+
+.carta-box h3 {
+  color: var(--main-color);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.carta-box p {
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.descargar-btn {
+  margin-top: 1.5rem;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.4rem;
+  transition: background-color 0.3s;
+}
+
+.descargar-btn:hover {
+  background-color: #d65a3b;
+}
+.contacto-email {
+  margin-top: 1.5rem;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.contacto-email a {
+  color: #e07a5f;
+  text-decoration: none;
+}
+
+.contacto-email a:hover {
+  text-decoration: underline;
+}
+
+footer a {
+  color: var(--bg-color);
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+    </style>
+  </head>
+  <script>
+  function mostrarCertificados() {
+    const contenedor = document.getElementById("certificadosLista");
+    const boton = document.querySelector(".mostrar-btn");
+
+    const estaOculto = contenedor.style.display === "none" || contenedor.style.display === "";
+
+    contenedor.style.display = estaOculto ? "flex" : "none";
+    boton.textContent = estaOculto ? "Ocultar Certificados" : "Mostrar Certificados";
+  }
+</script>
+<script>
+  function mostrarDiploma() {
+    const contenedor = document.getElementById("diplomaContenedor");
+    const estaOculto = contenedor.style.display === "none" || contenedor.style.display === "";
+    contenedor.style.display = estaOculto ? "flex" : "none";
+
+    const boton = document.querySelectorAll(".mostrar-btn")[1];
+    boton.textContent = estaOculto ? "Ocultar Diploma" : "Mostrar Diploma";
+  }
+</script>
+
+  <body>
+    <header class="encabezado">
+      <a href="#" class="logo"><img src="" alt="" /></a>
+      <i class='bx bx-menu' id="menu-icon"></i>
+     <nav class="navbar">
+  <a href="#" class="active" id="menu-inicio">Inicio</a>
+  <a href="#sobre" id="menu-sobremi">Sobre mí</a>
+  <a href="#proyecto1" id="menu-proyecto">Proyecto</a>
+  <a href="#recomendaciones" id="menu-recomendaciones">Recomendaciones</a> <!-- 👈 AGREGÁ ESTA LÍNEA -->
+  <button id="toggle-lang" data-lang="es">English</button>
+</nav>
+
+    </header>
+
+    <section class="inicio" id="inicio">
+      <div class="inicio-contenido">
+        <h3 id="intro">Hola, me llamo</h3>
+        <h1>David Ernesto Jaime Carrillo</h1>
+        <h2 id="titulo1">Futuro Ingeniero en Sistemas en la Universidad Gerardo Barrios</h2>
+        <p id="frase">Apasionado por la tecnología, el conocimiento abre puertas, la dedicación las mantiene abiertas.</p>
+        <div class="medio-social">
+          <a href="" target="_blank"><i class='bx bx-phone'></i></a>
+          <a href="" target="_blank"><i class='bx bx-envelope'></i></a>
+          <a href="" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+        </div>
+      </div>
+      <div class="inicio-img">
+        <img src="img/davo.jpg" alt="" />
+      </div>
+    </section>
+
+    <section class="sobremi" id="sobre">
+      <div class="sobremi-img">
+        <img src="img/davo.jpg" alt="" />
+      </div>
+      <div class="sobremi-contenido">
+        <h1 class="heading" id="sobremi-titulo">Sobre Mí</h1>
+        <p id="sobremi-texto">Hola, me llamo David Carrillo, soy estudiante de la Universidad Gerardo Barrios. Estoy en mi 4º año de Ingeniería en Sistemas. Me apasiona la robótica, la animación y también me gusta el mundo de las redes informáticas. Aunque disfruto aprender sobre redes, a veces tengo dificultades con el aprendizaje rápido en este campo, pero sigo esforzándome para mejorar cada día.</p>
+        <div class="btn-caja">
+          <a href="files/cv.pdf" class="btnmodal">Descargar CV <i class="bx bx-download"></i></a>
+        </div>
+        <div class="enlaces-proyecto" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin-top: 2rem;">
+         </div>
+       <button class="mostrar-btn" onclick="mostrarCertificados()">Mostrar Certificados</button>
+
+<div class="certificados" id="certificadosLista">
+  <a href="files/certificado.pdf" class="btnmodal" download target="_blank">Certificado 1</a>
+  <a href="files/IM.pdf" class="btnmodal" download target="_blank">Certificado 2</a>
+  <a href="files/certi.pdf" class="btnmodal" download target="_blank">Certificado 3</a>
+  <a href="files/cer.pdf" class="btnmodal" download target="_blank">Certificado 4</a>
+</div>
+<!-- Botón para mostrar diploma -->
+<button class="mostrar-btn" onclick="mostrarDiploma()">Mostrar Diploma</button>
+
+<!-- Contenedor del diploma -->
+<div class="certificados" id="diplomaContenedor">
+  <a href="files/David Clic.pdf" class="btnmodal" download target="_blank">Diploma</a>
+</div>
+<div class="contacto-email">
+  📧 <strong>Correo:</strong>
+  <a href="mailto:david2003ernesto@gmail.com">david2003ernesto@gmail.com</a>
+</div>
+
+</div>
+    </section>
+<section class="proyecto" id="proyecto1">
+  <h2>Proyecto 1: RefugioSOS</h2>
+
+  <h3 class="subtitulo">Objetivo del Proyecto</h3>
+  <p>
+    RefugioSOS es una plataforma web informativa enfocada en brindar ayuda a personas en situaciones de emergencia en El Salvador.
+    Su propósito es localizar rápidamente albergues disponibles, compartir medidas de prevención y conectar a los usuarios con instituciones de apoyo humanitario.
+  </p>
+
+  <h3 class="subtitulo">Descripción General del Proceso</h3>
+  <p>
+    El desarrollo comenzó con la planificación del contenido, seguido por el diseño de interfaz, maquetación con HTML y CSS, e integración de imágenes informativas.
+    Finalmente, se publicó en GitHub como plataforma de acceso libre.
+  </p>
+
+  <h3 class="subtitulo">Rol y Responsabilidades</h3>
+  <p>
+       Me desempeñé como <strong>Diseñador UI/UX</strong>. Fui responsable de conceptualizar la experiencia del usuario, definir la estructura del sitio,
+    diseñar las interfaces gráficas en línea con la usabilidad y estética, y colaborar en la organización de los recursos visuales del proyecto.
+  </p>
+
+  <h3 class="subtitulo">Lenguajes y Herramientas Utilizadas</h3>
+  <p>HTML5, CSS3, Google Maps y canvas.</p>
+
+  <div class="galeria-proyecto">
+    <a href="img/imagen (1).png" target="_blank"><img src="img/imagen (1).png" alt="RefugioSOS Imagen 1" /></a>
+    <a href="img/imagen (2).png" target="_blank"><img src="img/imagen (2).png" alt="RefugioSOS Imagen 2" /></a>
+    <a href="img/imagen (3).png" target="_blank"><img src="img/imagen (3).png" alt="RefugioSOS Imagen 3" /></a>
+    <a href="img/imagen (4).png" target="_blank"><img src="img/imagen (4).png" alt="RefugioSOS Imagen 4" /></a>
+    <a href="img/imagen (5).png" target="_blank"><img src="img/imagen (5).png" alt="RefugioSOS Imagen 5" /></a>
+  </div>
+
+  <div class="enlaces-proyecto">
+    <a href="https://github.com/Cristian0Herrera/refugiososadmin.github.io" target="_blank">Ver repositorio en GitHub</a>
+  </div>
+    </section>
+    <section class="proyecto" id="proyecto2">
+  <h2>Proyecto 2: Carrito de Robótica – Vuelta en U</h2>
+
+  <h3 class="subtitulo">Objetivo del Proyecto</h3>
+  <p>
+    Diseñar y construir un carrito autónomo capaz de realizar una vuelta en U utilizando motores, controladores y componentes básicos, sin necesidad de sensores de distancia. El objetivo fue aplicar principios de electrónica básica, mecánica simple y control de movimiento.
+  </p>
+
+  <h3 class="subtitulo">Descripción General del Proceso</h3>
+  <p>
+    El proyecto inició con el diseño del circuito en simulador, seguido del ensamblaje físico en protoboard con Arduino UNO, controlador L293D y motores. Se descartó el uso del sensor ultrasónico, enfocándose únicamente en el movimiento automatizado en forma de U mediante programación básica. 
+  </p>
+
+  <h3 class="subtitulo">Mi Rol y Responsabilidades</h3>
+  <p>
+    Participé como responsable de <strong>ensamblaje físico</strong> del proyecto, armando el carrito completo, conectando sus componentes y apoyando en pruebas funcionales del giro controlado.
+  </p>
+
+  <h3 class="subtitulo">Lenguajes y Herramientas Utilizadas</h3>
+  <p>Arduino C/C++, Tinkercad (simulación), protoboard, controlador L293D, motores DC, LED, resistencias.</p>
+
+  <h3 class="subtitulo">Imagen del Prototipo</h3>
+  <div class="galeria-proyecto">
+    <a href="img/robotica.jpg" target="_blank">
+      <img src="img/robotica.jpg" alt="Carrito de robótica - vuelta en U" />
+    </a>
+  </div>
+
+  <div class="enlaces-proyecto">
+    <a href="https://www.tinkercad.com/things/db99yfHTg2L/editel?sharecode=R8RB8AIxIHb-udIJ-Cr5bme7DZcnhLv8XHXVXX_dcbE " target="_blank">Ver circuito en Tinkercad</a>
+  </div>
+</section>
+<section class="proyecto" id="proyecto3">
+  <h2>Proyecto 3: Percepción Pública de la IA y la Automatización</h2>
+
+  <h3 class="subtitulo">Objetivo del Proyecto</h3>
+  <p>
+    Investigar cómo percibe la sociedad el impacto de la inteligencia artificial y la automatización, con énfasis en las preocupaciones, temores y oportunidades que estas tecnologías generan en distintos ámbitos, especialmente en lo laboral, educativo y ético.
+  </p>
+
+  <h3 class="subtitulo">Descripción General del Proceso</h3>
+  <p>
+    Este trabajo fue desarrollado como parte de la materia "Método de Investigación". El proceso incluyó la formulación de preguntas de investigación, diseño de encuestas, recolección de datos, análisis de resultados y presentación de conclusiones.
+  <h3 class="subtitulo">Mi Rol y Responsabilidades</h3>
+  <p>
+    Participé activamente en la construcción de los instrumentos de recolección de datos, redacción del informe, análisis de resultados y diseño visual de las presentaciones utilizadas para socializar los hallazgos.
+  </p>
+
+  <h3 class="subtitulo">Herramientas Utilizadas</h3>
+  <p>
+    Google Forms (encuestas), Google Sheets, Word.
+  </p>
+
+  <div class="galeria-proyecto">
+    <a href="img/IMG-2.jpg" target="_blank"><img src="img/IMG-2.jpg" alt="Portada del informe de investigación" /></a>
+    <a href="img/IMG-2ss.jpg" target="_blank"><img src="img/IMG-2ss.jpg" alt="Resultados del informe" /></a>
+  </div>
+
+  <div class="enlaces-proyecto">
+    <a href="https://cdn3.me-qr.com/pdf/22814548.pdf" class="btnmodal" target="_blank">Ver informe completo en PDF</a>
+  </div>
+  <section id="recomendaciones" class="recomendaciones" style="background-color: var(--snd-bf-color); padding: 8rem 10%;">
+  <h2>Cartas de Recomendación</h2>
+  <div class="cartas-grid">
+
+    <div class="carta-box">
+      <h3>Lic. Oscar Roberto Torres Rodríguez</h3>
+      <p>Docente tiempo completo</p>
+      <p>Facultad de Ciencias y Tecnologías</p>
+      <p>Universidad Gerardo Barrios</p>
+      <a href="files/RecomendaDavid.doc" download class="descargar-btn">
+        📄 Descargar Carta
+      </a>
+    </div>
+
+    <div class="carta-box">
+      <h3>Ing. Marvin Osmaro Parada Benítez</h3>
+      <p>Docente tiempo completo</p>
+      <p>Facultad de Ciencias y Tecnologías</p>
+      <p>Universidad Gerardo Barrios</p>
+      <a href="files/USSS105322@ugb.edu.sv.pdf" download class="descargar-btn">
+        📄 Descargar Carta
+      </a>
+    </div>
+
+    <div class="carta-box">
+      <h3>Lic. Herbert René Cordero Henríquez</h3>
+      <p>Docente tiempo completo</p>
+      <p>Facultad de Ciencias y Tecnologías</p>
+      <p>Universidad Gerardo Barrios</p>
+      <a href="files/Carta David.docx" download class="descargar-btn">
+        📄 Descargar Carta
+      </a>
+    </div>
+
+  </div>
+</section>
+
+  </div>
+</section>
+
+</div>
+</section>
+
+    <footer>
+      &copy; 2025 David Ernesto Jaime Carrillo | RefugioSOS | Todos los derechos reservados.        📧 <a href="mailto:david2003ernesto@gmail.com">david2003ernesto@gmail.com</a>
+    </footer>
+
+    <script>
+      function mostrarCertificados() {
+        const contenedor = document.getElementById("certificadosLista");
+        contenedor.style.display = contenedor.style.display === "none" ? "flex" : "none";
+      }
+    </script>
+  </body>
+  <script>
+    document.getElementById('toggle-lang').addEventListener('click', function () {
+      const langBtn = document.getElementById('toggle-lang');
+      const currentLang = langBtn.getAttribute('data-lang');
+  
+      if (currentLang === 'es') {
+        // Cambiar a inglés
+        langBtn.innerText = 'Español';
+        langBtn.setAttribute('data-lang', 'en');
+  
+        document.getElementById('menu-inicio').innerText = 'Home';
+        document.getElementById('menu-sobremi').innerText = 'About Me';
+        document.getElementById('intro').innerText = 'Hi, my name is';
+        document.getElementById('titulo1').innerText = 'Future Systems Engineer at Gerardo Barrios University';
+        document.getElementById('frase').innerText = 'Passionate about technology. Knowledge opens doors, dedication keeps them open.';
+        document.getElementById('sobremi-titulo').innerText = 'About Me';
+        document.getElementById('sobremi-texto').innerText = 'Hi, I\'m David Carrillo, a student at Gerardo Barrios University. I\'m in my 4th year of Systems Engineering. I love robotics, animation, and also enjoy the world of computer networks. Although I enjoy learning about networks, I sometimes struggle to learn quickly in this field, but I keep working to improve every day.';
+        document.getElementById('titulo-proyecto').innerText = 'About the Project';
+  
+        const subtitulos = document.querySelectorAll('.subtitulo');
+        subtitulos[0].innerText = 'Process Description';
+        subtitulos[1].innerText = 'My Role';
+        subtitulos[2].innerText = 'Technologies Used';
+        subtitulos[3].innerText = 'Robotics Project';
+  
+        const parrafos = document.querySelectorAll('.proyecto p');
+        parrafos[0].innerText = 'RefugioSOS is a web platform that provides information about shelters in El Salvador for emergency situations. It helps locate available shelters and learn about prevention and assistance measures.';
+        parrafos[1].innerText = 'The project began with content planning, followed by visual design and HTML/CSS layout. Finally, it was published on GitHub.';
+        parrafos[2].innerText = 'I designed the site structure, visual content, and section organization, as well as the graphics and links.';
+        parrafos[3].innerText = 'HTML5, CSS3, and Canva.';
+        parrafos[4].innerText = 'I also collaborated on a robotics project as part of the development team. Below is an image of the prototype:';
+  
+      } else {
+ <script>
+  document.getElementById('toggle-lang').addEventListener('click', function () {
+    const langBtn = document.getElementById('toggle-lang');
+    const currentLang = langBtn.getAttribute('data-lang');
+
+    if (currentLang === 'es') {
+      // Cambiar a inglés
+      langBtn.innerText = 'Español';
+      langBtn.setAttribute('data-lang', 'en');
+
+      document.getElementById('menu-inicio').innerText = 'Home';
+      document.getElementById('menu-sobremi').innerText = 'About Me';
+      document.getElementById('intro').innerText = 'Hi, my name is';
+      document.getElementById('titulo1').innerText = 'Future Systems Engineer at Gerardo Barrios University';
+      document.getElementById('frase').innerText = 'Passionate about technology. Knowledge opens doors, dedication keeps them open.';
+      document.getElementById('sobremi-titulo').innerText = 'About Me';
+      document.getElementById('sobremi-texto').innerText = "Hi, I'm David Carrillo, a student at Gerardo Barrios University. I'm in my 4th year of Systems Engineering. I love robotics, animation, and also enjoy the world of computer networks. Although I enjoy learning about networks, I sometimes struggle to learn quickly in this field, but I keep working to improve every day.";
+
+      const subtitulos = document.querySelectorAll('.subtitulo');
+      subtitulos[0].innerText = 'Project Objective';
+      subtitulos[1].innerText = 'General Description of the Process';
+      subtitulos[2].innerText = 'Role and Responsibilities';
+      subtitulos[3].innerText = 'Languages and Tools Used';
+
+      const parrafos = document.querySelectorAll('.proyecto p');
+      parrafos[0].innerText = 'RefugioSOS is an informative web platform focused on helping people in emergency situations in El Salvador. Its purpose is to quickly locate available shelters, share prevention measures, and connect users with humanitarian support institutions.';
+      parrafos[1].innerText = 'The development began with content planning, followed by interface design, HTML and CSS layout, and integration of informational images. Finally, it was published on GitHub as a free access platform.';
+      parrafos[2].innerText = 'I worked as a UI/UX Designer. I was responsible for conceptualizing the user experience, defining the site structure, designing the graphic interfaces in line with usability and aesthetics, and collaborating in the organization of the project\'s visual resources.';
+      parrafos[3].innerText = 'HTML5, CSS3, Google Maps, and Canvas.';
+
+      // Cambiar botones de carta a inglés
+      document.getElementById('btn-carta-1').innerText = '📄 Download Letter';
+      document.getElementById('btn-carta-2').innerText = '📄 Download Letter';
+      document.getElementById('btn-carta-3').innerText = '📄 Download Letter';
+
+    } else {
+      // Cambiar a español
+      langBtn.innerText = 'English';
+      langBtn.setAttribute('data-lang', 'es');
+
+      document.getElementById('menu-inicio').innerText = 'Inicio';
+      document.getElementById('menu-sobremi').innerText = 'Sobre mí';
+      document.getElementById('intro').innerText = 'Hola, me llamo';
+      document.getElementById('titulo1').innerText = 'Futuro Ingeniero en Sistemas en la Universidad Gerardo Barrios';
+      document.getElementById('frase').innerText = 'Apasionado por la tecnología, el conocimiento abre puertas, la dedicación las mantiene abiertas.';
+      document.getElementById('sobremi-titulo').innerText = 'Sobre Mí';
+      document.getElementById('sobremi-texto').innerText = 'Hola, me llamo David Carrillo, soy estudiante de la Universidad Gerardo Barrios. Estoy en mi 4º año de Ingeniería en Sistemas. Me apasiona la robótica, la animación y también me gusta el mundo de las redes informáticas. Aunque disfruto aprender sobre redes, a veces tengo dificultades con el aprendizaje rápido en este campo, pero sigo esforzándome para mejorar cada día.';
+
+      const subtitulos = document.querySelectorAll('.subtitulo');
+      subtitulos[0].innerText = 'Objetivo del Proyecto';
+      subtitulos[1].innerText = 'Descripción General del Proceso';
+      subtitulos[2].innerText = 'Rol y Responsabilidades';
+      subtitulos[3].innerText = 'Lenguajes y Herramientas Utilizadas';
+
+      const parrafos = document.querySelectorAll('.proyecto p');
+      parrafos[0].innerText = 'RefugioSOS es una plataforma web informativa enfocada en brindar ayuda a personas en situaciones de emergencia en El Salvador. Su propósito es localizar rápidamente albergues disponibles, compartir medidas de prevención y conectar a los usuarios con instituciones de apoyo humanitario.';
+      parrafos[1].innerText = 'El desarrollo comenzó con la planificación del contenido, seguido por el diseño de interfaz, maquetación con HTML y CSS, e integración de imágenes informativas. Finalmente, se publicó en GitHub como plataforma de acceso libre.';
+      parrafos[2].innerText = 'Me desempeñé como Diseñador UI/UX. Fui responsable de conceptualizar la experiencia del usuario, definir la estructura del sitio, diseñar las interfaces gráficas en línea con la usabilidad y estética, y colaborar en la organización de los recursos visuales del proyecto.';
+      parrafos[3].innerText = 'HTML5, CSS3, Google Maps y canvas.';
+
+      // Cambiar botones de carta a español
+      document.getElementById('btn-carta-1').innerText = '📄 Descargar Carta';
+      document.getElementById('btn-carta-2').innerText = '📄 Descargar Carta';
+      document.getElementById('btn-carta-3').innerText = '📄 Descargar Carta';
+    }
+  });
+</script>
+
+  
+</html>
